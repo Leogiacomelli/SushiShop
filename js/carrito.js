@@ -72,6 +72,22 @@ const pintarCarrito = () => {
 verCarrito.addEventListener("click" , pintarCarrito);
 
 const eliminarProducto = () => {
+
+     Toastify({
+        text: "Se eliminó el producto",
+        duration: 2000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top", 
+        position: "left",
+        stopOnFocus: true,
+        style: {
+          background: "red",
+        },
+        onClick: function(){}
+      }).showToast();
+
     const foundId = carrito.find((element) => element.id);
 
     carrito = carrito.filter((carritoId) => {
